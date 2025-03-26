@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avances del Proyecto en React</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            padding: 20px;
+            background-color: #f4f4f4;
+        }
+        .container {
+            max-width: 800px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: left;
+        }
+        th {
+            background-color: #4CAF50;
+            color: white;
+        }
+        pre {
+            background: #eee;
+            padding: 10px;
+            border-radius: 5px;
+            overflow-x: auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Primera Fase de Desarrollo, Revisión y Ajuste de los Sprints</h1>
+        <h2>Avances de los Sprints</h2>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>Historia de Usuario</th>
+                <th>Estado Actual</th>
+                <th>Porcentaje de Avance</th>
+                <th>Comentarios</th>
+            </tr>
+            <tr>
+                <td>1</td>
+                <td>Autenticación de usuario</td>
+                <td>En desarrollo</td>
+                <td>75%</td>
+                <td>Falta implementar verificación en dos pasos</td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Pagos en línea</td>
+                <td>Completado</td>
+                <td>100%</td>
+                <td>Integración con PayPal finalizada</td>
+            </tr>
+        </table>
+        
+        <h2>Ajustes Realizados</h2>
+        <p><strong>Ajuste 1:</strong> Cambio en la pasarela de pagos de Stripe a PayPal.</p>
+        <p><strong>Motivo:</strong> Se detectaron problemas de compatibilidad con tarjetas locales.</p>
+        
+        <h2>Buscar Productos</h2>
+        <div>
+            <input type="text" id="searchQuery" placeholder="Buscar productos..." />
+            <button onclick="handleSearch()">Buscar</button>
+        </div>
+        <p id="searchResult"></p>
+    </div>
+
+    <script>
+        function handleSearch() {
+            const query = document.getElementById('searchQuery').value;
+            const resultText = query ? `Buscando: ${query}` : 'Por favor ingresa un término de búsqueda.';
+            document.getElementById('searchResult').textContent = resultText;
+        }
+    </script>
+</body>
+</html>
